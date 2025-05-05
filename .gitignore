@@ -1,0 +1,9 @@
+# 🔒 API key
+.env
+
+# 🐍 Cache Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv\
