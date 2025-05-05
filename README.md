@@ -1,81 +1,81 @@
-# Café LycoReco - Layanan Pelanggan Berbasis AI
+# Café LycoReco - AI-Powered Customer Service
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Latar Belakang dan Referensi Nama
+## Background and Name Reference
 
-Proyek ini terinspirasi dari anime populer "Lycoris Recoil". Nama "Café LycoReco" diambil dari nama kafe tempat para karakter utama bekerja dan berinteraksi. Layaknya kafe tersebut yang menawarkan berbagai layanan, proyek ini bertujuan untuk menyediakan layanan pelanggan yang interaktif dan informatif melalui chatbot berbasis kecerdasan buatan.
+This project is inspired by the popular anime "Lycoris Recoil". The name "Café LycoReco" is taken from the name of the café where the main characters work and interact. Just like the café offers various services in the anime, this project aims to provide interactive and informative customer service through an AI-powered chatbot.
 
-## Teknologi yang Digunakan
+## Technologies Used
 
-Proyek ini dibangun menggunakan teknologi berikut:
+This project is built using the following technologies:
 
-* **Gradio:** Sebuah *framework* Python yang memungkinkan pembuatan antarmuka pengguna berbasis web untuk model *machine learning* dengan cepat.
-* **Groq:** Sebuah platform yang menyediakan akses ke model bahasa besar (LLM) berperforma tinggi, dalam proyek ini menggunakan model `llama3-8b-8192`.
-* **Python:** Bahasa pemrograman utama yang digunakan dalam pengembangan.
-* **dotenv:** Pustaka Python untuk memuat variabel lingkungan dari file `.env`.
+* **Gradio:** A Python framework that allows for the rapid creation of web-based user interfaces for machine learning models.
+* **Groq:** A platform providing access to high-performance large language models (LLMs), in this project utilizing the `llama3-8b-8192` model.
+* **Python:** The primary programming language used for development.
+* **dotenv:** A Python library to load environment variables from a `.env` file.
 
-## Cara Penggunaan
+## How to Use
 
-Berikut adalah langkah-langkah untuk menjalankan aplikasi layanan pelanggan ini:
+Here are the steps to run this customer service application:
 
-1.  **Prasyarat:**
-    * Pastikan Anda telah menginstal **Python** di sistem Anda.
-    * Instal `pip` (Python package installer) jika belum terpasang.
+1.  **Prerequisites:**
+    * Ensure you have **Python** installed on your system.
+    * Install `pip` (Python package installer) if it's not already installed.
 
-2.  **Kloning Repositori (opsional):**
-    Jika kode ini berada di repositori GitHub, Anda dapat mengkloningnya menggunakan perintah:
+2.  **Clone the Repository (optional):**
+    If this code is in a GitHub repository, you can clone it using the command:
     ```bash
-    git clone <URL_repositori>
-    cd <nama_repositori>
+    git clone <repository_URL>
+    cd <repository_name>
     ```
 
-3.  **Instal Dependensi:**
-    Pastikan Anda telah menginstal semua pustaka yang diperlukan. Anda dapat melakukannya dengan menjalankan perintah berikut di terminal atau command prompt:
+3.  **Install Dependencies:**
+    Make sure you have installed all the necessary libraries. You can do this by running the following command in your terminal or command prompt:
     ```bash
     pip install gradio groq python-dotenv
     ```
 
-4.  **Konfigurasi API Key:**
-    * Buat sebuah file bernama `.env` di direktori proyek Anda.
-    * Tambahkan API key dari Groq ke dalam file `.env` dengan format berikut:
+4.  **Configure API Key:**
+    * Create a file named `.env` in your project directory.
+    * Add your Groq API key to the `.env` file in the following format:
         ```
-        GROQ_API_KEY=YOUR_GROQ_API_KEY_DI_SINI
+        GROQ_API_KEY=YOUR_GROQ_API_KEY_HERE
         ```
-        Pastikan untuk mengganti `YOUR_GROQ_API_KEY_DI_SINI` dengan API key Groq Anda yang sebenarnya.
+        Make sure to replace `YOUR_GROQ_API_KEY_HERE` with your actual Groq API key.
 
-5.  **Konfigurasi Prompt Sistem (opsional):**
-    * Pastikan Anda memiliki file bernama `prompt.txt` di direktori proyek Anda.
-    * File ini berisi prompt sistem yang akan digunakan untuk mengarahkan perilaku chatbot. Anda dapat memodifikasi isi file ini sesuai dengan kebutuhan Anda.
+5.  **Configure System Prompt (optional):**
+    * Ensure you have a file named `prompt.txt` in your project directory.
+    * This file contains the system prompt that will guide the chatbot's behavior. You can modify the contents of this file according to your needs.
 
-6.  **Menjalankan Aplikasi:**
-    Buka terminal atau command prompt, navigasikan ke direktori proyek Anda, dan jalankan perintah berikut:
+6.  **Run the Application:**
+    Open your terminal or command prompt, navigate to your project directory, and run the following command:
     ```bash
-    python <nama_file_script_python_anda>.py
+    python <your_python_script_file_name>.py
     ```
-    (Ganti `<nama_file_script_python_anda>.py` dengan nama file skrip Python Anda, misalnya `app.py`).
+    (Replace `<your_python_script_file_name>.py` with the name of your Python script file, for example, `app.py`).
 
-7.  **Mengakses Antarmuka:**
-    Setelah aplikasi berhasil dijalankan, Gradio akan menyediakan URL lokal (biasanya dimulai dengan `http://localhost:` diikuti dengan nomor port). Buka URL tersebut di peramban web Anda untuk mengakses antarmuka layanan pelanggan Café LycoReco.
+7.  **Access the Interface:**
+    Once the application runs successfully, Gradio will provide a local URL (usually starting with `http://localhost:` followed by a port number). Open this URL in your web browser to access the Café LycoReco customer service interface.
 
-8.  **Berinteraksi dengan Chatbot:**
-    Pada antarmuka web, Anda dapat mengetik pesan Anda di kolom yang tersedia dan chatbot akan memberikan respons berdasarkan prompt sistem dan model `llama3-8b-8192` dari Groq.
+8.  **Interact with the Chatbot:**
+    On the web interface, you can type your messages in the provided field, and the chatbot will respond based on the system prompt and the `llama3-8b-8192` model from Groq.
 
-## Catatan Penting
+## Important Notes
 
-* Pastikan API key Groq Anda aman dan tidak dibagikan secara publik.
-* Prompt sistem dalam file `prompt.txt` memainkan peran penting dalam menentukan bagaimana chatbot merespons. Eksperimen dengan prompt yang berbeda untuk mendapatkan hasil yang optimal.
-* Parameter seperti `temperature`, `max_tokens`, dan `top_p` dalam fungsi `chatbot_response` dapat disesuaikan untuk mengontrol kreativitas dan panjang respons chatbot.
-* Aplikasi ini berjalan secara lokal di komputer Anda kecuali Anda secara spesifik menyebarkannya ke platform hosting web.
+* Keep your Groq API key secure and do not share it publicly.
+* The system prompt in the `prompt.txt` file plays a crucial role in determining how the chatbot responds. Experiment with different prompts to achieve optimal results.
+* Parameters like `temperature`, `max_tokens`, and `top_p` in the `chatbot_response` function can be adjusted to control the chatbot's creativity and response length.
+* This application runs locally on your computer unless you specifically deploy it to a web hosting platform.
 
-## Lisensi
+## License
 
-Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file `LICENSE` untuk informasi lebih lanjut.
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-## Kontribusi
+## Contribution
 
-Jika Anda tertarik untuk berkontribusi pada proyek ini, jangan ragu untuk mengirimkan *pull request* atau membuat *issue* di repositori GitHub.
+If you are interested in contributing to this project, feel free to submit pull requests or create issues in the GitHub repository.
 
-## Penulis
+## Author
 
-Ryurex-Corporation
+Ryurex Corporation
